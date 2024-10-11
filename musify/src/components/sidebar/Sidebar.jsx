@@ -21,7 +21,7 @@ function Sidebar() {
         />
         <SidebarButton title="Library" to="/library" icon={<IoLibrary />} />
       </div>
-      <SidebarButton />
+      <SidebarButton title="Signout" to="" icon={<FaSignoutAlt />} />
     </div>
   );
 }
