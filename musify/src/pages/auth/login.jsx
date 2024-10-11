@@ -1,7 +1,7 @@
-import { loginEndpoint } from "../../../spotify";
+import { loginEndpoint } from "../../spotify";
 import "./login.css";
 
-function login() {
+function Login() {
   return (
     <div className="logIn-page">
       <img
@@ -16,4 +16,4 @@ function login() {
   );
 }
 
-export default login;
+export default Login;

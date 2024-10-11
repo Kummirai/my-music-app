@@ -5,9 +5,22 @@ import Favorites from "./Favorites";
 import Player from "./Player";
 import Trending from "./Trending";
 import Sidebar from "../components/sidebar/Sidebar";
+import Login from "./auth/login";
+import { useState, useEffect } from "react";
 
 function Home() {
-  return (
+  const [token, setToken] = useState(null);
+
+  useEffect(() => {
+    const hash = window.location.hash;
+    const token = hash.split("&")[0].split("=")[1];
+    window.localStorage.setItem("token", token);
+    setToken(token);
+  }, []);
+
+  return !token ? (
+    <Login />
+  ) : (
     <Router>
       <div className="container">
         <Sidebar />
