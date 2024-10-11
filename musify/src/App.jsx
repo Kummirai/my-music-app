@@ -1,7 +1,12 @@
 import "./App.css";
+import Home from "./pages/Home";
 
 function App() {
-  return <>Hewllol</>;
+  return (
+    <>
+    <Home />
+    </>
+  )
 }
 
 export default App;
