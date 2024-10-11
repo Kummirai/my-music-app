@@ -1,5 +1,5 @@
 function Trending() {
-  return <div>Trending</div>;
+  return <div className="page-container">Trending</div>;
 }
 
 export default Trending;

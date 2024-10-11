@@ -14,12 +14,10 @@ a {
 }
 
 .btn-container.active {
-  /*glossy effects*/
-  background: linear-gradient(
-    90deg,
-    rgb(116, 104, 167) 0%,
-    rgba(71, 5, 57, 0.849) 100%
-  );
+  backdrop-filter: blur(0px) saturate(180%);
+  -webkit-backdrop-filter: blur(0px) saturate(180%);
+  background-color: rgba(0, 0, 0, 0.58);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   transition: background 0.3s;
   cursor: pointer;
 }
