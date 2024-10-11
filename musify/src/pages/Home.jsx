@@ -4,10 +4,12 @@ import Feed from "./Feed";
 import Favorites from "./Favorites";
 import Player from "./Player";
 import Trending from "./Trending";
+import Sidebar from "../components/sidebar/Sidebar";
 
 function Home() {
   return (
     <Router>
+      <Sidebar />
       <div className="container">
         <Routes>
           <Route path="/" element={<Library />} />
