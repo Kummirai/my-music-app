@@ -1,0 +1,18 @@
+a{
+  text-decoration: none;
+  color: white;
+}
+
+.btn-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 60px;
+  width: 60px;
+}
+
+.btn-container{
+  margin: 4px auto;
+  font-weight: bold;
+}

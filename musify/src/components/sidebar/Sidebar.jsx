@@ -2,7 +2,7 @@ import "./sidebar.css";
 import SidebarButton from "./SidebarButton";
 import { MdFavorite } from "react-icons/md";
 import { FaGripfire, FaPlay } from "react-icons/fa";
-import { FaSignoutAlt } from "react-icons/fa";
+import { FaSignOutAlt } from "react-icons/fa";
 import { IoLibrary } from "react-icons/io5";
 import { MdSpaceDashboard } from "react-icons/md";
 
@@ -21,7 +21,7 @@ function Sidebar() {
         />
         <SidebarButton title="Library" to="/library" icon={<IoLibrary />} />
       </div>
-      <SidebarButton title="Signout" to="" icon={<FaSignoutAlt />} />
+      <SidebarButton title="Signout" to="" icon={<FaSignOutAlt />} />
     </div>
   );
 }
