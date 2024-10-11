@@ -1,5 +1,5 @@
 function Library() {
-  return <div>Library</div>;
+  return <div className="page-container">Library</div>;
 }
 
 export default Library;

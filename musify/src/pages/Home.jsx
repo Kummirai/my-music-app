@@ -9,8 +9,8 @@ import Sidebar from "../components/sidebar/Sidebar";
 function Home() {
   return (
     <Router>
-      <Sidebar />
       <div className="container">
+        <Sidebar />
         <Routes>
           <Route path="/" element={<Library />} />
           <Route path="/feed" element={<Feed />} />
