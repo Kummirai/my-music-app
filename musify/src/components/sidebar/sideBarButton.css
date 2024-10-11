@@ -1,9 +1,9 @@
-a{
+a {
   text-decoration: none;
   color: white;
 }
 
-.btn-container{
+.btn-container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -13,7 +13,20 @@ a{
   padding: 10px;
 }
 
-.btn-container .title{
+.btn-container.active {
+  /*glossy effects*/
+  background: linear-gradient(
+    90deg,
+    rgb(116, 104, 167) 0%,
+    rgba(71, 5, 57, 0.849) 100%
+  );
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s;
+  cursor: pointer;
+}
+
+.btn-container .title {
   font-size: 12px;
   padding-left: 8px;
+  font-weight: 700;
 }
