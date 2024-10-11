@@ -7,12 +7,13 @@ a{
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  height: 60px;
-  width: 60px;
+  /* flex-direction: column; */
+  height: 80px;
+  width: 100%;
+  padding: 10px;
 }
 
-.btn-container{
-  margin: 4px auto;
-  font-weight: bold;
+.btn-container .title{
+  font-size: 12px;
+  padding-left: 8px;
 }

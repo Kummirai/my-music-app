@@ -9,7 +9,7 @@ function SidebarButton(props) {
       <div className="btn-container">
         <IconContext.Provider value={{ size: '24px', className:"btn-icon" }}>
           {props.icon}
-          <p>{props.title}</p>
+          <p className="title">{props.title}</p>
         </IconContext.Provider>
       </div>
     </Link>
