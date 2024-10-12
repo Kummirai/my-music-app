@@ -17,7 +17,11 @@ function Library() {
       <div className="library-container">
         {playlists?.map((playlist) => (
           <div key={playlist.id}>
-            <div>{playlist.name}</div>
+            <div className="playlist-card">
+              <img src="milton.jpg" alt={playlist.name} />
+              <p className="title">{playlist.name}</p>
+              <p className="sub-title">{playlist.tracks.total} Songs</p>
+            </div>
           </div>
         ))}
       </div>
