@@ -5,7 +5,7 @@ import { FaGripfire, FaPlay } from "react-icons/fa";
 import { FaSignOutAlt } from "react-icons/fa";
 import { IoLibrary } from "react-icons/io5";
 import { MdSpaceDashboard } from "react-icons/md";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import apiClient from "../../spotify";
 
 function Sidebar() {
