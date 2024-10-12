@@ -34,7 +34,7 @@ function Home() {
       <div className="container">
         <Sidebar />
         <Routes>
-          <Route path="/" element={<Library />} />
+          <Route path="/library" element={<Library />} />
           <Route path="/feed" element={<Feed />} />
           <Route path="/favorites" element={<Favorites />} />
           <Route path="/player" element={<Player />} />
