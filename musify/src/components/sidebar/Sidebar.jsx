@@ -5,11 +5,24 @@ import { FaGripfire, FaPlay } from "react-icons/fa";
 import { FaSignOutAlt } from "react-icons/fa";
 import { IoLibrary } from "react-icons/io5";
 import { MdSpaceDashboard } from "react-icons/md";
+import { useEffect } from "react";
+import apiClient from "../../spotify";
 
 function Sidebar() {
+  const [userImage, setUserImage] = useState(
+    "https://cdn.pixabay.com/photo/2023/06/23/11/23/ai-generated-8083323_1280.jpg"
+  );
+
+  useEffect(() => {
+    apiClient.get("me").then((res) => {
+      console.log(res);
+      setUserImage(res.data.images[0].url);
+    });
+  }, []);
+
   return (
     <div className="sidebar-container">
-      <img src="milton.jpg" alt="user image" className="user-image" />
+      <img src={userImage} alt={userImage} className="user-image" />
       <div className="buttons">
         <SidebarButton title="Feed" to="/feed" icon={<MdSpaceDashboard />} />
         <SidebarButton title="Trending" to="/trending" icon={<FaGripfire />} />

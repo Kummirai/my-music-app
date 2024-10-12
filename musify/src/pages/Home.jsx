@@ -7,6 +7,7 @@ import Trending from "./Trending";
 import Sidebar from "../components/sidebar/Sidebar";
 import Login from "./auth/login";
 import { useState, useEffect } from "react";
+import { setClientToken } from "../spotify";
 
 function Home() {
   const [token, setToken] = useState(null);
@@ -20,6 +21,7 @@ function Home() {
       const token = hash.split("&")[0].split("=")[1];
       window.localStorage.setItem("token", token);
       setToken(token);
+      setClientToken(token);
     } else {
       setToken(token);
     }
