@@ -12,10 +12,17 @@ function Home() {
   const [token, setToken] = useState(null);
 
   useEffect(() => {
+    const token = window.localStorage.getItem("token");
     const hash = window.location.hash;
-    const token = hash.split("&")[0].split("=")[1];
-    window.localStorage.setItem("token", token);
-    setToken(token);
+    window.location.hash = "";
+
+    if (!token && hash) {
+      const token = hash.split("&")[0].split("=")[1];
+      window.localStorage.setItem("token", token);
+      setToken(token);
+    } else {
+      setToken(token);
+    }
   }, []);
 
   return !token ? (
