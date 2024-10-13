@@ -34,7 +34,7 @@ function Player() {
         </div>
         <div className="right-player-container">
           <SongCard song={currentTrack.album} />
-          <Queue />
+          <Queue tracks={tracks} setCurrentTrackIndex={setCurrentTrackIndex} />
         </div>
       </div>
     </div>
