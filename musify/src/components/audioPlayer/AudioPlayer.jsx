@@ -9,7 +9,7 @@ function AudioPlayer({ currentTrack }) {
         <ProgressCircle
           percentage={75}
           isPlaying={currentTrack?.album?.images[0]?.url}
-          image={currentTrack?.tracks}
+          image={currentTrack?.album?.images[0]?.url}
           size={300}
           color="#fbfbfb"
         />

@@ -1,5 +1,5 @@
 .albumImage {
-  width: 60%;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -8,14 +8,14 @@
 }
 
 .albumImage img {
-  width: 100%;
+  width: 65%;
   aspect-ratio: 1;
 }
 
 .albumImage-shadow {
   -webkit-filter: blur(10px);
   filter: blur(10px);
-  width: 90%;
+  width: 60%;
   position: absolute;
   z-index: -1;
   top: 20px;
