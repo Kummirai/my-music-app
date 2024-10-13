@@ -32,7 +32,7 @@ function Player() {
       <div className="flex">
         <div className="left-player-container"></div>
         <div className="right-player-container">
-          <SongCard />
+          <SongCard song={currentTrack.album}/>
           <Queue />
         </div>
       </div>
