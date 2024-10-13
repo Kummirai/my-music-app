@@ -5,6 +5,7 @@ import apiClient from "../spotify";
 import { useState } from "react";
 import SongCard from "../components/songCard/SongCard";
 import Queue from "../components/queue/Queue";
+import AudioPlayer from "../components/audioPlayer/AudioPlayer";
 
 function Player() {
   const location = useLocation();
@@ -36,7 +37,7 @@ function Player() {
     <div className="page-container">
       <div className="flex">
         <div className="left-player-container">
-          <h1>Left</h1>
+          <AudioPlayer currentTrack={currentTrack} />
         </div>
         <div className="right-player-container">
           <SongCard song={currentTrack.album} />
