@@ -26,6 +26,7 @@
 }
 
 .playlist-card {
+  position: relative;
   border-radius: 20px;
   height: 280px;
   background: linear-gradient(
@@ -36,6 +37,7 @@
   padding: 10%;
   margin: 10px;
   position: relative;
+  cursor: pointer;
 }
 
 .playlist-card:hover  .playlist-fade{

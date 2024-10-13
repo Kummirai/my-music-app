@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import "./library.css";
 import { IconContext } from "react-icons";
 import { AiFillPlayCircle } from "react-icons/ai";
+import { useNavigate } from "react-router-dom";
 
 function Library() {
   const [playlists, setPlaylists] = useState(null);
@@ -14,11 +15,22 @@ function Library() {
     });
   }, []);
 
+  const navigate = useNavigate();
+
+  const playPlayList = (playlistId) => {
+    navigate("/player", { state: { id: playlistId } });
+  };
+
   return (
     <div className="page-container">
       <div className="library-container">
         {playlists?.map((playlist) => (
-          <div key={playlist.id}>
+          <div
+            key={playlist.id}
+            onClick={() => {
+              playPlayList(playlist.id);
+            }}
+          >
             <div className="playlist-card">
               <img src="milton.jpg" alt={playlist.name} />
               <p className="title">{playlist.name}</p>
