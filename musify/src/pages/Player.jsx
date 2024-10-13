@@ -1,5 +1,43 @@
+import { useEffect } from "react";
+import "./player.css";
+import { useLocation } from "react-router-dom";
+import apiClient from "../spotify";
+import { useState } from "react";
+import SongCard from "../components/songCard/SongCard";
+import Queue from "../components/queue/Queue";
+
 function Player() {
-  return <div className="page-container">Player</div>;
+  const location = useLocation();
+  const [tracks, setTracks] = useState([]);
+  const [currentTrack, setCurrentTrack] = useState({});
+  const [currentTrackIndex, setCurrentTrackIndex] = useState(0);
+
+  useEffect(() => {
+    if (location.state) {
+      apiClient
+        .get("playlists/" + location.state?.id + "/tracks")
+        .then((response) => {
+          console.log(response.data);
+          setTracks(response.data.items);
+          setCurrentTrack(response.data.items[0].track);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    }
+  }, [location.state]);
+
+  return (
+    <div className="page-container">
+      <div className="flex">
+        <div className="left-player-container"></div>
+        <div className="right-player-container">
+          <SongCard />
+          <Queue />
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default Player;
