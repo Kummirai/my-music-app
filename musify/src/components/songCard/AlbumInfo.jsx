@@ -12,10 +12,14 @@ function AlbumInfo({ album }) {
   return (
     <div className="albumInfo-card">
       <div className="albumName-container">
-        <p>{album?.name + "-"+ artist?.join(",")}</p>
+        <div className="marquee-content">
+          {album?.name + "-" + artist?.join(",")}
+        </div>
       </div>
       <div className="album-info">
-        <p>{`${album?.name} is an ${album?.album_type} by ${artist?.join(",")} with ${album?.total_tracks} tracks `}</p>
+        <p>{`${album?.name} is an ${album?.album_type} by ${artist?.join(
+          ","
+        )} with ${album?.total_tracks} tracks `}</p>
       </div>
       <div className="album-release">
         <p>Release Date: {album?.release_date}</p>
