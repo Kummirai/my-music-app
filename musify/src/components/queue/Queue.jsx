@@ -1,7 +1,11 @@
 import "./Queue.css";
 
-function Queue() {
-  return <div className="queue-container">Queue</div>;
+function Queue({ tracks, setCurrentTrackIndex }) {
+  return <div className="queue-container">
+    <div className="queue">
+      
+    </div>
+  </div>;
 }
 
 export default Queue;
