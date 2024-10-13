@@ -2,15 +2,17 @@ import "./Queue.css";
 import PropTypes from "prop-types";
 
 function Queue({ tracks, setCurrentTrackIndex }) {
+  console.log(tracks);
+
   return (
     <div className="queue-container">
       <div className="queue">
         <p className="upNext">Up Next</p>
         <div className="queue-list">
           {tracks.map((track, index) => (
-            <div key={index}>
-              <p>{track.track.name}</p>
-              <p>{track.track.artists[0].name}</p>
+            <div className="queueItem" key={index}>
+              <p className="trackName">{track?.track.name}</p>
+              <p>00:58</p>
             </div>
           ))}
         </div>

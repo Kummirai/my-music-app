@@ -18,7 +18,7 @@ function Player() {
         .get("playlists/" + location.state?.id + "/tracks")
         .then((response) => {
           setTracks(response.data.items);
-          setCurrentTrack(response.data.items[0].track);
+          setCurrentTrack(response.data?.items[0]?.track);
         })
         .catch((error) => {
           console.log(error);
