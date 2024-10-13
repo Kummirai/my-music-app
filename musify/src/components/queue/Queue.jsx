@@ -1,7 +1,7 @@
 import "./Queue.css";
 
 function Queue() {
-  return <div>Queue</div>;
+  return <div className="queue-container">Queue</div>;
 }
 
 export default Queue;
