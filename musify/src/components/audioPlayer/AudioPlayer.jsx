@@ -7,11 +7,11 @@ function AudioPlayer({ currentTrack }) {
     <div className="player-body">
       <div className="player-left-body">
         <ProgressCircle
-          percentage={50}
+          percentage={75}
           isPlaying={true}
           image={currentTrack?.tracks}
           size={300}
-          color="white"
+          color="orange"
         />
       </div>
       <div className="player-right-body"></div>
