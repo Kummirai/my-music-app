@@ -11,7 +11,6 @@ function Library() {
   useEffect(() => {
     APIKit.get("me/playlists").then((response) => {
       setPlaylists(response.data.items);
-      console.log(response.data.items);
     });
   }, []);
 

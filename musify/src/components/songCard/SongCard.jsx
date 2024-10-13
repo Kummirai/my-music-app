@@ -1,13 +1,13 @@
 import "./SongCard.css";
-import AlbumArt from "../albumArt/AlbumArt";
-import AlbumInfo from "../albumInfo/AlbumInfo";
+import AlbumArt from "../songCard/AlbumArt";
+import AlbumInfo from "../songCard/AlbumInfo";
 import PropTypes from "prop-types";
 
-function SongCard(props) {
+function SongCard({album}) {
   return (
     <div className="songCard-container">
-      <AlbumArt url={props.album.images[0].url} />
-      <AlbumInfo album={props.album} />
+      <AlbumArt url={album?.images[0]?.url} />
+      <AlbumInfo album={album} />
     </div>
   );
 }
