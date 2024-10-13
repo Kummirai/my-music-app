@@ -26,6 +26,12 @@ function Player() {
     }
   }, [location.state]);
 
+  useEffect(() => {
+    if (tracks.length > 0) {
+      setCurrentTrack(tracks[currentTrackIndex].track);
+    }
+  }, [currentTrackIndex, tracks]);
+
   return (
     <div className="page-container">
       <div className="flex">

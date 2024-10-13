@@ -10,7 +10,11 @@ function Queue({ tracks, setCurrentTrackIndex }) {
         <p className="upNext">Up Next</p>
         <div className="queue-list">
           {tracks.map((track, index) => (
-            <div className="queueItem" key={index}>
+            <div
+              className="queueItem"
+              key={index}
+              onClick={() => setCurrentTrackIndex(index)}
+            >
               <p className="trackName">{track?.track.name}</p>
               <p>00:58</p>
             </div>
