@@ -17,7 +17,6 @@ function Player() {
       apiClient
         .get("playlists/" + location.state?.id + "/tracks")
         .then((response) => {
-          console.log(response.data.items);
           setTracks(response.data.items);
           setCurrentTrack(response.data.items[0].track);
         })
