@@ -18,8 +18,9 @@ function Player() {
       apiClient
         .get("playlists/" + location.state?.id + "/tracks")
         .then((response) => {
+          // console.log(response.data?.items?.[0]?.track);
           setTracks(response.data.items);
-          setCurrentTrack(response.data?.items[0]?.track);
+          setCurrentTrack(response.data?.items?.[0]?.track);
         })
         .catch((error) => {
           console.log(error);
@@ -28,9 +29,7 @@ function Player() {
   }, [location.state]);
 
   useEffect(() => {
-    if (tracks.length > 0) {
-      setCurrentTrack(tracks[currentTrackIndex].track);
-    }
+    setCurrentTrack(tracks[currentTrackIndex]?.track);
   }, [currentTrackIndex, tracks]);
 
   return (
@@ -40,7 +39,8 @@ function Player() {
           <AudioPlayer currentTrack={currentTrack} />
         </div>
         <div className="right-player-container">
-          <SongCard song={currentTrack.album} />
+          <SongCard album={currentTrack?.album} />
+          {console.log(currentTrack?.album)}
           <Queue tracks={tracks} setCurrentTrackIndex={setCurrentTrackIndex} />
         </div>
       </div>

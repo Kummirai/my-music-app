@@ -2,7 +2,6 @@ import "./albumArt.css";
 import PropTypes from "prop-types";
 
 function AlbumArt({ url }) {
-  console.log(url);
   return (
     <div className="albumImage">
       <img src={url} alt="album art" className="albumImage-art" />

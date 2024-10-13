@@ -2,11 +2,9 @@ import PropTypes from "prop-types";
 import "./albumInfo.css";
 
 function AlbumInfo({ album }) {
-  console.log(album);
-
   const artist = [];
-  album?.artists.forEach((artist) => {
-    artist.push(artist.name);
+  album?.artists.forEach((element) => {
+    artist.push(element.name);
   });
 
   return (

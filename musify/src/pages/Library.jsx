@@ -12,7 +12,6 @@ function Library() {
     APIKit.get("me/playlists")
       .then((response) => {
         setPlaylists(response.data.items);
-        console.log(response.data.items);
       })
       .catch((error) => {
         console.log("error", error);
@@ -37,7 +36,6 @@ function Library() {
           >
             <div className="playlist-card">
               <img src={playlist.images?.[0]?.url} alt={playlist.name} />
-              {console.log(playlist.images?.[0]?.url)}
               <p className="title">{playlist.name}</p>
               <p className="sub-title">{playlist.name} Songs</p>
               <div className="playlist-fade">
