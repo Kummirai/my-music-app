@@ -2,8 +2,6 @@ import "./Queue.css";
 import PropTypes from "prop-types";
 
 function Queue({ tracks, setCurrentTrackIndex }) {
-  console.log(tracks);
-
   return (
     <div className="queue-container">
       <div className="queue">
