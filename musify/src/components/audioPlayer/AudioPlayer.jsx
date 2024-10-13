@@ -11,7 +11,7 @@ function AudioPlayer({ currentTrack }) {
           isPlaying={true}
           image={currentTrack?.tracks}
           size={300}
-          color="orange"
+          color="#fbfbfb"
         />
       </div>
       <div className="player-right-body"></div>

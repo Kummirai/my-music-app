@@ -36,7 +36,7 @@ function Library() {
             }}
           >
             <div className="playlist-card">
-              <img src="" alt={playlist.name} />
+              <img src="milton.jpg" alt={playlist.name} />
               <p className="title">{playlist.name}</p>
               <p className="sub-title">{playlist.name} Songs</p>
               <div className="playlist-fade">
