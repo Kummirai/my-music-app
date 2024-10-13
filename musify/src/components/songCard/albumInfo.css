@@ -21,6 +21,7 @@
   overflow: hidden;
   white-space: nowrap;
   animation: marquee 10s linear infinite;
+  padding-right: 100%;
 }
 
 @keyframes marquee {
