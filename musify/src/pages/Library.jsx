@@ -9,9 +9,14 @@ function Library() {
   const [playlists, setPlaylists] = useState(null);
 
   useEffect(() => {
-    APIKit.get("me/playlists").then((response) => {
-      setPlaylists(response.data.items);
-    });
+    APIKit.get("me/playlists")
+      .then((response) => {
+        setPlaylists(response.data.items);
+        console.log(response.data.items);
+      })
+      .catch((error) => {
+        console.log("error", error);
+      });
   }, []);
 
   const navigate = useNavigate();
@@ -31,9 +36,9 @@ function Library() {
             }}
           >
             <div className="playlist-card">
-              <img src="milton.jpg" alt={playlist.name} />
+              <img src="" alt={playlist.name} />
               <p className="title">{playlist.name}</p>
-              <p className="sub-title">{playlist.tracks.total} Songs</p>
+              <p className="sub-title">{playlist.name} Songs</p>
               <div className="playlist-fade">
                 <IconContext.Provider value={{ size: "50px", color: "white" }}>
                   <AiFillPlayCircle />
