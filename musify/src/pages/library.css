@@ -54,7 +54,7 @@
 .playlist-card img {
   width: 100%;
   aspect-ratio: 1;
-  border-radius: 15px;
+  border-radius: 5px;
 }
 
 .playlist-card .title {
