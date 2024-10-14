@@ -25,7 +25,7 @@ function AudioPlayer({
   const { duration } = audioRef.current;
   // console.log(duration);
   // console.log(trackProgress);
-  
+
   const currentPercentage = duration ? (trackProgress / duration) * 100 : 0;
 
   const startTimer = () => {
@@ -112,7 +112,7 @@ function AudioPlayer({
         <div className="player-right-bottom">
           <div className="song-duration">
             <p className="duration">0:{addZero(Math.round(trackProgress))}</p>
-            <WaveAnimation isPlaying={true} />
+            <WaveAnimation isPlaying={isPlaying} />
             <p className="duration">00:31</p>
           </div>
           <Controls
