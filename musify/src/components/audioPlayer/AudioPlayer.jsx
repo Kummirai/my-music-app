@@ -23,6 +23,7 @@ function AudioPlayer({
   const isReady = useRef(false);
 
   const { duration } = audioRef.current;
+  console.log(duration);
 
   const currentPercentage = duration ? (trackProgress / duration) * 100 : 0;
 
@@ -76,6 +77,10 @@ function AudioPlayer({
     }
   };
 
+  const addZero = (num) => {
+    return num < 10 ? `0${num}` : num;
+  };
+
   const handlePrev = () => {
     if (currentTrackIndex - 1 < 0) {
       setCurrentTrackIndex(total.length - 1);
@@ -105,7 +110,7 @@ function AudioPlayer({
         <p className="song-artist">{artists.join(" | ")}</p>
         <div className="player-right-bottom">
           <div className="song-duration">
-            <p className="duration">00:01</p>
+            <p className="duration">0:{addZero(Math.round(trackProgress))}</p>
             <WaveAnimation isPlaying={true} />
             <p className="duration">00:31</p>
           </div>

@@ -18,7 +18,6 @@ function Player() {
       apiClient
         .get("playlists/" + location.state?.id + "/tracks")
         .then((response) => {
-          // console.log(response.data?.items?.[0]?.track);
           setTracks(response.data.items);
           setCurrentTrack(response.data?.items?.[0]?.track);
         })
@@ -45,7 +44,6 @@ function Player() {
         </div>
         <div className="right-player-container">
           <SongCard album={currentTrack?.album} />
-          {console.log(currentTrack?.album)}
           <Queue tracks={tracks} setCurrentTrackIndex={setCurrentTrackIndex} />
         </div>
       </div>
