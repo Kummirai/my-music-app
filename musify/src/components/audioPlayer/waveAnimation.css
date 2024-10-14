@@ -30,7 +30,7 @@
 }
 
 .box3 {
-  animation-name: quiet;
+  animation-name: normal;
 }
 
 .box4 {
@@ -38,13 +38,49 @@
 }
 
 .box5 {
-  animation-name: quiet;
+  animation-name: loud;
 }
 
 .box6 {
-  animation-name: quiet;
+  animation-name: normal;
 }
 
 .box7 {
   animation-name: quiet;
+}
+
+@keyframes quiet {
+  25% {
+    transform: scale(0.6);
+  }
+  50% {
+    transform: scale(0.4);
+  }
+  75% {
+    transform: scale(0.8);
+  }
+}
+
+@keyframes normal {
+  25% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.4);
+  }
+  75% {
+    transform: scale(0.6);
+  }
+}
+
+@keyframes loud {
+  25% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.4);
+  }
+  75% {
+    transform: scale(1.2);
+  }
 }
