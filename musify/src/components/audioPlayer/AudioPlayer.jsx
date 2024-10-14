@@ -23,8 +23,9 @@ function AudioPlayer({
   const isReady = useRef(false);
 
   const { duration } = audioRef.current;
-  console.log(duration);
-
+  // console.log(duration);
+  // console.log(trackProgress);
+  
   const currentPercentage = duration ? (trackProgress / duration) * 100 : 0;
 
   const startTimer = () => {
