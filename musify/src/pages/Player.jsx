@@ -6,7 +6,7 @@ import { useState } from "react";
 import SongCard from "../components/songCard/SongCard";
 import Queue from "../components/queue/Queue";
 import AudioPlayer from "../components/audioPlayer/AudioPlayer";
-import { MdWidgets } from "react-icons/md";
+import Widgets from "../components/audioPlayer/Widgets";
 
 function Player() {
   const location = useLocation();
@@ -42,7 +42,7 @@ function Player() {
             currentTrackIndex={currentTrackIndex}
             setCurrentTrackIndex={setCurrentTrackIndex}
           />
-          <MdWidgets artistID={currentTrack?.Album} />
+          <Widgets artistID={currentTrack?.Album} />
         </div>
         <div className="right-player-container">
           <SongCard album={currentTrack?.album} />
