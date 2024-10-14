@@ -3,7 +3,7 @@ import ProgressCircle from "./ProgressCircle";
 import PropTypes from "prop-types";
 import WaveAnimation from "./WaveAnimation";
 
-function AudioPlayer({ currentTrack }) {
+function AudioPlayer({ currentTrack, isPlaying }) {
   const artists = [];
   currentTrack?.album?.artists.forEach((artist) => {
     artists.push(artist.name);
@@ -26,7 +26,7 @@ function AudioPlayer({ currentTrack }) {
         <div className="player-right-bottom">
           <div className="song-duration">
             <p className="duration">00:01</p>
-            <WaveAnimation />
+            <WaveAnimation isPlaying={isPlaying} />
             <p className="duration">00:31</p>
           </div>
           {/* <Controls

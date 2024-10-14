@@ -36,7 +36,7 @@ function Player() {
     <div className="page-container">
       <div className="flex">
         <div className="left-player-container">
-          <AudioPlayer currentTrack={currentTrack} />
+          <AudioPlayer currentTrack={currentTrack} isPlaying={true} />
         </div>
         <div className="right-player-container">
           <SongCard album={currentTrack?.album} />
