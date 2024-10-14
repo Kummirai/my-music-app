@@ -1,6 +1,7 @@
 import "./audioPlayer.css";
 import ProgressCircle from "./ProgressCircle";
 import PropTypes from "prop-types";
+import WaveAnimation from "./WaveAnimation";
 
 function AudioPlayer({ currentTrack }) {
   const artists = [];
@@ -25,16 +26,16 @@ function AudioPlayer({ currentTrack }) {
         <div className="player-right-bottom">
           <div className="song-duration">
             <p className="duration">00:01</p>
-            {/* <WaveAnimation /> */}
+            <WaveAnimation />
             <p className="duration">00:31</p>
           </div>
-          <Controls
-          isPlaying = {isPLaying}
-          setIsPlaying = {setIsPlaying}
-          handleNext = {handleNext}
-          handlePrev = {handlePrev}
-          total = {total}
-          />
+          {/* <Controls
+            isPlaying={isPLaying}
+            setIsPlaying={setIsPlaying}
+            handleNext={handleNext}
+            handlePrev={handlePrev}
+            total={total}
+          /> */}
         </div>
       </div>
     </div>
@@ -44,6 +45,11 @@ function AudioPlayer({ currentTrack }) {
 //props validation
 AudioPlayer.propTypes = {
   currentTrack: PropTypes.object,
+  isPlaying: PropTypes.bool,
+  setIsPlaying: PropTypes.func,
+  handleNext: PropTypes.func,
+  handlePrev: PropTypes.func,
+  total: PropTypes.number,
 };
 
 export default AudioPlayer;
