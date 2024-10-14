@@ -21,6 +21,15 @@ const Circle = ({ color, percentage, size, strokeWidth }) => {
   );
 };
 
+//props validation
+Circle.propTypes = {
+  radius: PropTypes.number,
+  color: PropTypes.string,
+  percentage: PropTypes.number,
+  size: PropTypes.number,
+  strokeWidth: PropTypes.string,
+};
+
 export default function ProgressCircle({
   percentage,
   isPlaying,

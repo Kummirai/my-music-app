@@ -123,7 +123,7 @@ function AudioPlayer({
           <div className="song-duration">
             <p className="duration">0:{addZero(Math.round(trackProgress))}</p>
             <WaveAnimation isPlaying={isPlaying} />
-            <p className="duration">00:31</p>
+            <p className="duration">00:30</p>
           </div>
           <Controls
             isPlaying={isPlaying}
