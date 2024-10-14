@@ -40,13 +40,23 @@ function AudioPlayer({
   };
 
   useEffect(() => {
-    if (isPlaying && audioRef.current) {
-      audioRef.current = new Audio(audioSrc);
-      audioRef.current.play();
-      startTimer();
+    if (audioRef.current.src) {
+      if (isPlaying) {
+        audioRef.current.play();
+        startTimer();
+      } else {
+        clearInterval(intervalRef.current);
+        audioRef.current.pause();
+      }
     } else {
-      clearInterval(intervalRef.current);
-      audioRef.current.pause();
+      if (isPlaying) {
+        audioRef.current = new Audio(audioSrc);
+        audioRef.current.play();
+        startTimer();
+      } else {
+        clearInterval(intervalRef.current);
+        audioRef.current.pause();
+      }
     }
   }, [isPlaying]);
 
