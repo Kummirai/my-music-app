@@ -3,7 +3,7 @@ import ProgressCircle from "./ProgressCircle";
 import PropTypes from "prop-types";
 import WaveAnimation from "./WaveAnimation";
 import { useEffect, useRef, useState } from "react";
-import Controls from "./controls";
+import Controls from "./Controls";
 
 function AudioPlayer({
   currentTrack,
