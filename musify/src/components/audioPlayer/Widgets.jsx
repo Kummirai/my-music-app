@@ -16,6 +16,8 @@ function Widgets({ artistID }) {
       .then((response) => {
         const otherArtists = response.data?.artists.slice(0, 3);
         setSimilar(otherArtists);
+        console.log("similar", otherArtists);
+        
       })
       .catch((error) => {
         console.error(error);
@@ -48,8 +50,8 @@ function Widgets({ artistID }) {
   return (
     <div className="widget-body">
       <WidgetCard title="Similar Artists" similar={similar} />
-      <WidgetCard title="Made For You" similar={featured} />
-      <WidgetCard title="New Release" similar={newRelease} />
+      <WidgetCard title="Made For You" featured={featured} />
+      <WidgetCard title="New Release" newRelease={newRelease} />
     </div>
   );
 }
