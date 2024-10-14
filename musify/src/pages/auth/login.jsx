@@ -4,14 +4,16 @@ import "./login.css";
 function Login() {
   return (
     <div className="logIn-page">
-      <img
-        src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_RGB_White.png"
-        alt="spotify logo"
-        className="logo"
-      />
-      <a href={loginEndpoint} className="logIn-btn">
-        Log In
-      </a>
+      <div className="logo">
+        <img src="sound (1).png" alt="spotify logo" className="logo" />
+        <h1 className="logIn-title">Musify</h1>
+      </div>
+      <div className="logIn-container">
+        <a href={loginEndpoint} className="logIn-btn">
+          Log In
+        </a>
+        <h2 className="logIn-text">With Spotify</h2>
+      </div>
     </div>
   );
 }
