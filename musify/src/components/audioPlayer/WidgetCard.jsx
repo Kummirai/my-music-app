@@ -4,7 +4,7 @@ import WidgetEntry from "./WidgetEntry";
 
 function WidgetCard({ title, similar, featured, newRelease }) {
   return (
-    <>
+    <div className="widgetcard-header">
     <p className="widget-title">{title}</p>
     <div className="widgetcard-body">
       {similar
@@ -36,7 +36,7 @@ function WidgetCard({ title, similar, featured, newRelease }) {
           ))
         : null}
     </div>
-    </>
+    </div>
   );
 }
 
