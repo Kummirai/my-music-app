@@ -53,9 +53,19 @@
   justify-content: space-evenly;
 }
 
-.player-right-body{
+.player-right-bottom{
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
+.song-duration, controls-wrapper{
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
 .widget-body {
   grid-column: 1 / 5;
   grid-row: 6 / 13;
@@ -63,7 +73,7 @@
 
 .songCard-container {
   grid-column: 9 / -2;
-  grid-row: 2 / 9;
+  grid-row: 2 / 6;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
