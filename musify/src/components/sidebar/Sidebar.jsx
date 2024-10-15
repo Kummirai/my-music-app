@@ -25,7 +25,7 @@ function Sidebar() {
       <img src={userImage} alt={userImage} className="user-image" />
       <div className="buttons">
         <SidebarButton title="Feed" to="/feed" icon={<MdSpaceDashboard />} />
-        <SidebarButton title="Trending" to="/trending" icon={<FaGripfire />} />
+        <SidebarButton title="Artists" to="/artists" icon={<FaGripfire />} />
         <SidebarButton title="Player" to="/player" icon={<FaPlay />} />
         <SidebarButton
           title="Favorites"
