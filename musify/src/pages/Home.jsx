@@ -8,6 +8,7 @@ import Sidebar from "../components/sidebar/Sidebar";
 import Login from "./auth/login";
 import { useState, useEffect } from "react";
 import { setClientToken } from "../spotify";
+import Logout from "./Logout";
 
 function Home() {
   const [token, setToken] = useState(null);
@@ -39,6 +40,7 @@ function Home() {
           <Route path="/favorites" element={<Favorites />} />
           <Route path="/player" element={<Player />} />
           <Route path="/trending" element={<Trending />} />
+          <Route path="/logout" element={<Logout />} />
         </Routes>
       </div>
     </Router>
