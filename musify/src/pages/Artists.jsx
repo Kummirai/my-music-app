@@ -6,7 +6,7 @@ function Artists() {
   const [artists, setArtists] = useState(null);
 
   useEffect(() => {
-    APIKit.get("/search?query=artist_name&offset=0&limit=40&type=artist")
+    APIKit.get("/search?query=artist_name&offset=0&limit=50&type=artist")
       .then((response) => {
         console.log(response.data.artists.items);
         setArtists(response.data.artists.items);
