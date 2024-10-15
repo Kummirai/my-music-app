@@ -123,6 +123,97 @@ controls-wrapper {
 
 /*Responsive design for tablets*/
 
-@media screen { 
-  
+@media (max-width: 768px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+    height: 100vh;
+    width: 100vw;
+  }
+  .sidebar-container {
+    grid-column: 1 / 2;
+    grid-row: 1 / -1;
+  }
+  /* .page-container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    grid-column: 2 / -1;
+    grid-row: 1 / -1;
+    padding: 10px;
+    overflow: hidden;
+  }
+
+  .player-left-body {
+    grid-column: 1 / -1;
+    grid-row: auto;
+    display: flex;
+    align-items: center;
+  }
+
+  .player-right-body{
+    grid-column: 1 / -1;
+    grid-row: auto;
+  }
+
+  .songCard-container{
+    grid-column: 1 / -1;
+    grid-row: auto;
+  } */
+  .page-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+  }
+
+  .player-left-body{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .player-right-body{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .songCard-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .queue-container{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  } 
+
+  .widget-body{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .widgetcard-body{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    overflow: auto;
+    margin-bottom: 20px;
+  }
 }

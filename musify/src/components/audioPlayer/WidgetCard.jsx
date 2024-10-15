@@ -4,8 +4,9 @@ import WidgetEntry from "./WidgetEntry";
 
 function WidgetCard({ title, similar, featured, newRelease }) {
   return (
+    <>
+    <p className="widget-title">{title}</p>
     <div className="widgetcard-body">
-      <p className="widget-title">{title}</p>
       {similar
         ? similar.map((artist) => (
             <WidgetEntry
@@ -35,6 +36,7 @@ function WidgetCard({ title, similar, featured, newRelease }) {
           ))
         : null}
     </div>
+    </>
   );
 }
 
