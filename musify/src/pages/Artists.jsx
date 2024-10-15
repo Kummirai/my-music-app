@@ -8,7 +8,6 @@ function Artists() {
   useEffect(() => {
     APIKit.get("/search?query=artist_name&offset=0&limit=50&type=artist")
       .then((response) => {
-        console.log(response.data.artists.items);
         setArtists(response.data.artists.items);
       })
       .catch((error) => {
