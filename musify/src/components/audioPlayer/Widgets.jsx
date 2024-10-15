@@ -9,12 +9,12 @@ function Widgets({ artistID }) {
   const [featured, setFeatured] = useState([]);
   const [newRelease, setNewRelease] = useState([]);
   const id = artistID?.artists[0]?.id;
-
+  
   useEffect(() => {
     apiClient
-      .get("artists/" + id + "/related-artists")
+      .get("/search?query=artist_name&offset=0&limit=3&type=artist")
       .then((response) => {
-        const otherArtists = response.data?.artists.slice(0, 3);
+        const otherArtists = response.data?.artists.items.slice(0, 3);
         setSimilar(otherArtists);
         console.log("similar", otherArtists);
         
@@ -49,7 +49,7 @@ function Widgets({ artistID }) {
 
   return (
     <div className="widget-body">
-      <WidgetCard title="Similar Artists" similar={similar} />
+      <WidgetCard title="Artists" similar={similar} />
       <WidgetCard title="Made For You" featured={featured} />
       <WidgetCard title="New Release" newRelease={newRelease} />
     </div>

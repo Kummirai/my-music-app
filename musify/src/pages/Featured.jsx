@@ -8,7 +8,6 @@ function Featured() {
   useEffect(() => {
     APIKit.get("/browse/featured-playlists")
       .then((response) => {
-        console.log(response.data.playlists.items);
         setFeatured(response.data.playlists.items);
       })
       .catch((error) => {

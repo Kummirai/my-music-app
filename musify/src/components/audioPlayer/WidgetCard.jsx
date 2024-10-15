@@ -13,7 +13,7 @@ function WidgetCard({ title, similar, featured, newRelease }) {
                 key={artist.id} // Add a unique key
                 title={artist?.name}
                 subtitle={`${artist?.followers?.total} followers`}
-                image={artist?.images[2]?.url}
+                image={artist?.images[0]?.url}
               />
             ))
           : featured
