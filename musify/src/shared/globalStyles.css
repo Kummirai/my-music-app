@@ -107,3 +107,15 @@ controls-wrapper {
   justify-content: space-evenly;
   width: 60%;
 }
+
+.song-title{
+  font-size: 32px;
+  font-weight: 700;
+  color: whitesmoke;
+}
+
+.song-artist{
+  font-size: 18px;
+  font-weight: 500;
+  color: #b3b3b3;
+}
