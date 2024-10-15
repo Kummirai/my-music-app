@@ -36,6 +36,7 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   gap: 1rem;
   padding: 10px;
+  overflow: hidden;
 }
 
 .player-left-body {
@@ -101,21 +102,27 @@ controls-wrapper {
   align-items: center;
 }
 
-.song-duration{
+.song-duration {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   width: 60%;
 }
 
-.song-title{
+.song-title {
   font-size: 32px;
   font-weight: 700;
   color: whitesmoke;
 }
 
-.song-artist{
+.song-artist {
   font-size: 18px;
   font-weight: 500;
   color: #b3b3b3;
+}
+
+/*Responsive design for tablets*/
+
+@media screen { 
+  
 }
