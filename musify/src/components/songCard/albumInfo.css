@@ -1,6 +1,6 @@
 .albumInfo-card {
   margin-top: 20px;
-  width: 60%;
+  padding: 5px;
 }
 
 .albumInfo-card p {
@@ -15,23 +15,6 @@
   width: 100%;
 }
 
-/* .marquee-content {
-  width: 100%;
-  display: inline-block;
-  overflow: hidden;
-  white-space: nowrap;
-  animation: marquee 15s linear infinite;
-  padding: 0 300% 0 50%;
-}
-
-@keyframes marquee {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-} */
 
 .album-info {
   font-size: 14px;

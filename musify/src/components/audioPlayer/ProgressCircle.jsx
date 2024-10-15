@@ -38,7 +38,7 @@ export default function ProgressCircle({
   image,
 }) {
   return (
-    <div className="progress-circle flex">
+    <div className="progress-circle">
       <svg width={size} height={size}>
         <g>
           <Circle strokeWidth={"0.4rem"} color="#3B4F73" size={size} />

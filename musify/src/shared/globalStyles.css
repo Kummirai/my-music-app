@@ -5,20 +5,73 @@
   font-family: "Roboto", sans-serif;
 }
 
+.container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  color: white;
+  background: linear-gradient(
+    90deg,
+    rgb(15, 4, 61) 0%,
+    rgba(71, 5, 57, 0.849) 100%
+  );
+  height: 100vh;
+  width: 100vw;
+}
+.sidebar-container{
+  grid-column: 1 / 2;
+  grid-row: 1 / -1;
+}
+
 .page-container {
-  width: calc(100% - 100px);
-  height: 100%;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  height: 100vh;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  grid-column: 2 / -1;
+  grid-row: 1 / -1;
   backdrop-filter: blur(0px) saturate(180%);
   -webkit-backdrop-filter: blur(0px) saturate(180%);
   background-color: rgba(0, 0, 0, 0.58);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  gap: 1rem;
 }
 
-.flex {
+.player-left-body {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
   display: flex;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
+  align-items: center;
 }
+
+.player-right-body {
+  grid-column: 3 / 6;
+  grid-row: 1 / 3;
+  display: flex;
+  align-items: center;
+}
+.widget-body {
+  grid-column: 1 / 5;
+  grid-row: 6 / 13;
+}
+
+.songCard-container {
+  grid-column: 9 / -2;
+  grid-row: 2 / 9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.songCard-container img{
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.queue-container {
+  grid-column: 5 / 9;
+  grid-row: 6 / 13;
+}
+

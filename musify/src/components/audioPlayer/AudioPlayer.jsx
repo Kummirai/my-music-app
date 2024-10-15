@@ -106,7 +106,7 @@ function AudioPlayer({
   });
 
   return (
-    <div className="player-body">
+    <>
       <div className="player-left-body">
         <ProgressCircle
           percentage={currentPercentage}
@@ -134,7 +134,7 @@ function AudioPlayer({
           />
         </div>
       </div>
-    </div>
+    </>
   );
 }
 

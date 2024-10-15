@@ -34,21 +34,15 @@ function Player() {
 
   return (
     <div className="page-container">
-      <div className="flex">
-        <div className="left-player-container">
-          <AudioPlayer
-            currentTrack={currentTrack}
-            total={tracks}
-            currentTrackIndex={currentTrackIndex}
-            setCurrentTrackIndex={setCurrentTrackIndex}
-          />
-          <Widgets artistID={currentTrack?.Album} />
-        </div>
-        <div className="right-player-container">
-          <SongCard album={currentTrack?.album} />
-          <Queue tracks={tracks} setCurrentTrackIndex={setCurrentTrackIndex} />
-        </div>
-      </div>
+      <AudioPlayer
+        currentTrack={currentTrack}
+        total={tracks}
+        currentTrackIndex={currentTrackIndex}
+        setCurrentTrackIndex={setCurrentTrackIndex}
+      />
+      <Widgets artistID={currentTrack?.Album} />
+      <SongCard album={currentTrack?.album} />
+      <Queue tracks={tracks} setCurrentTrackIndex={setCurrentTrackIndex} />
     </div>
   );
 }
