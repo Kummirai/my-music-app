@@ -174,6 +174,8 @@ controls-wrapper {
   .songCard-container img {
     width: 80%;
     height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
 
   .queue-container {
@@ -202,5 +204,11 @@ controls-wrapper {
     overflow: auto;
     margin-bottom: 20px;
     place-content: center;
+  }
+
+  .albumInfo-card {
+    width: 80%;
+    margin-top: 10px;
+    overflow-y: auto;
   }
 }
