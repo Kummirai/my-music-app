@@ -3,7 +3,7 @@ import Library from "./Library";
 import Feed from "./Feed";
 import Favorites from "./Favorites";
 import Player from "./Player";
-import Trending from "./Trending";
+import Artists from "./Artists";
 import Sidebar from "../components/sidebar/Sidebar";
 import Login from "./auth/login";
 import { useState, useEffect } from "react";
@@ -39,7 +39,7 @@ function Home() {
           <Route path="/feed" element={<Feed />} />
           <Route path="/favorites" element={<Favorites />} />
           <Route path="/player" element={<Player />} />
-          <Route path="/trending" element={<Trending />} />
+          <Route path="/artists" element={<Artists />} />
           <Route path="/logout" element={<Logout />} />
         </Routes>
       </div>
