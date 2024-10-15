@@ -24,13 +24,13 @@ function Sidebar() {
     <div className="sidebar-container">
       <img src={userImage} alt={userImage} className="user-image" />
       <div className="buttons">
-        <SidebarButton title="Feed" to="/feed" icon={<MdSpaceDashboard />} />
+        <SidebarButton title="Featured" to="/featured" icon={<MdFavorite />} />
         <SidebarButton title="Artists" to="/artists" icon={<FaGripfire />} />
         <SidebarButton title="Player" to="/player" icon={<FaPlay />} />
         <SidebarButton
           title="Favorites"
           to="/favorites"
-          icon={<MdFavorite />}
+          icon={<MdSpaceDashboard />}
         />
         <SidebarButton title="Library" to="/library" icon={<IoLibrary />} />
       </div>
