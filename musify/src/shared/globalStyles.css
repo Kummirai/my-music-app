@@ -224,3 +224,57 @@ controls-wrapper {
     align-items: center;
   }
 }
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    height: 100vh;
+    width: 100vw;
+  }
+  .sidebar-container {
+    grid-column: 1 / 2;
+    grid-row: 1 / -1;
+  }
+
+  .page-container {
+    display: grid;
+    grid-column: 2 / -1;
+    grid-row: 1 / -1;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    overflow-y: auto;
+  }
+
+  .player-left-body {
+    grid-column: 1 / 6;
+    grid-row: 1 / 4;
+    margin-top: 50px;
+  }
+
+  .player-right-body {
+    grid-column: 6 / -1;
+    grid-row: 1 / 4;
+  }
+
+  .songCard-container {
+    grid-column: 1 / -2;
+    grid-row: 4 / 6;
+  }
+
+  .songCard-container {
+    grid-column: 1 / 5;
+    grid-row: 5 / 8;
+  }
+
+  .queue-container {
+    grid-column: 6 / -1;
+    grid-row: 5 / 8;
+  }
+
+  .widget-body {
+    grid-column: 1 / -1;
+    grid-row: 8 / -1;
+  }
+}
