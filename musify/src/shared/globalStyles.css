@@ -177,10 +177,10 @@ controls-wrapper {
   .songCard-container {
     width: 100%;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     order: 3;
+    flex-direction: row;
   }
 
   .song-title {
@@ -188,7 +188,7 @@ controls-wrapper {
   }
 
   .songCard-container img {
-    width: 80%;
+    width: 80px;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -223,17 +223,6 @@ controls-wrapper {
     margin-bottom: 20px;
     place-content: center;
   }
-
-  .albumInfo-card {
-    width: 80%;
-    margin-top: 10px;
-    overflow-y: auto;
-  }
-
-  .albumInfo-card::-webkit-scrollbar {
-    display: none;
-  }
-
   .widgetcard-header {
     width: 100%;
     display: flex;
