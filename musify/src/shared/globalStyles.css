@@ -28,7 +28,7 @@
   color: white;
   /* background-image: url("https://cdn.pixabay.com/photo/2019/01/06/01/20/headphones-3916271_1280.jpg"); */
   background-image: url('https://cdn.pixabay.com/photo/2017/08/02/19/09/people-2572972_960_720.jpg');
-  background-position: center;
+  background-position: cover;
   background-position: fixed;
   background-repeat: no-repeat;
   background-attachment: fixed;
