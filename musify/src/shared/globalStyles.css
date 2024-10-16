@@ -235,6 +235,10 @@ controls-wrapper {
     overflow-y: auto;
   }
 
+  .albumInfo-card::-webkit-scrollbar {
+    display: none;
+  }
+
   .widgetcard-header {
     width: 100%;
     display: flex;

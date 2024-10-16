@@ -4,6 +4,10 @@
   overflow-y: auto;
 }
 
+.albumInfo-card::-webkit-scrollbar {
+  display: none;
+}
+
 .albumInfo-card p {
   margin: 5px auto !important;
 }
