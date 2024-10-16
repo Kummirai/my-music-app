@@ -2,10 +2,7 @@
   grid-column: 1 / -1;
   grid-row: 1 / -1;
   background-color: #1f1f1f;
-  /* background-image: url("https://cdn.pixabay.com/photo/2019/01/06/01/20/headphones-3916271_1280.jpg"); */
-  background-image: url('https://cdn.pixabay.com/photo/2022/06/21/21/15/audio-7276511_1280.jpg');
-  background-attachment: fixed;
-  background-repeat: no-repeat;
+  background-image: url("https://cdn.pixabay.com/photo/2019/01/06/01/20/headphones-3916271_1280.jpg");
   display: flex;
   justify-content: space-around;
   align-items: center;
