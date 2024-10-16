@@ -1,8 +1,7 @@
-
 .library-container {
   grid-column: 1 / -1;
   grid-row: 1 / -1;
-  padding:3%;
+  padding: 3%;
   display: grid;
   align-items: center;
   justify-content: center;
@@ -22,7 +21,7 @@
   height: 300px;
   position: relative;
   cursor: pointer;
-  margin: 10px;
+  margin-bottom: 10px;
 }
 
 .playlist-card:hover .playlist-fade {
