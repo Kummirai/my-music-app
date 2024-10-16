@@ -2,7 +2,7 @@
 .library-container {
   grid-column: 1 / -1;
   grid-row: 1 / -1;
-  padding: 1%;
+  padding:3%;
   display: grid;
   align-items: center;
   justify-content: center;
