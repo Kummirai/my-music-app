@@ -32,7 +32,7 @@ function Featured() {
             }}
           >
             <div className="playlist-card">
-              <img src={playlist.images?.[0]?.url} alt={playlist.name} />
+              <img className="myImage" src={playlist.images?.[0]?.url} alt={playlist.name} />
               <p className="title">{playlist.name}</p>
               <p className="sub-title">{playlist.popularity}</p>
               <p className="sub-title">{playlist.tracks.total} Songs</p>
