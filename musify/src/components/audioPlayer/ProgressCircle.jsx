@@ -44,7 +44,7 @@ export default function ProgressCircle({
           <Circle strokeWidth={"0.4rem"} color="#3B4F73" size={size} />
           <Circle
             strokeWidth={"0.6rem"}
-            color={color}
+            color={"gray"}
             percentage={percentage}
             size={size}
           />
