@@ -63,7 +63,7 @@ export default function ProgressCircle({
           y={30}
           width={2 * (size / 2 - 30)}
           height={2 * (size / 2 - 30)}
-          href="playing.svg"
+          href="https://cdn.pixabay.com/photo/2019/01/06/01/20/headphones-3916271_1280.jpg"
           clipPath="url(#myCircle)"
         />
         <image
