@@ -23,23 +23,26 @@ function Featured() {
 
   return (
     <div className="page-container">
-      <div className="library-container">
-        {featured?.map((playlist) => (
-          <div
-            key={playlist.id}
-            onClick={() => {
-              showFeatured(playlist.id);
-            }}
-          >
-            <div className="playlist-card">
-              <img className="myImage" src={playlist.images?.[0]?.url} alt={playlist.name} />
-              <p className="title">{playlist.name}</p>
-              <p className="sub-title">{playlist.popularity}</p>
-              <p className="sub-title">{playlist.tracks.total} Songs</p>
-            </div>
+      {featured?.map((playlist) => (
+        <div
+          className="library-container"
+          key={playlist.id}
+          onClick={() => {
+            showFeatured(playlist.id);
+          }}
+        >
+          <div className="playlist-card">
+            <img
+              className="myImage"
+              src={playlist.images?.[0]?.url}
+              alt={playlist.name}
+            />
+            <p className="title">{playlist.name}</p>
+            <p className="sub-title">{playlist.popularity}</p>
+            <p className="sub-title">{playlist.tracks.total} Songs</p>
           </div>
-        ))}
-      </div>
+        </div>
+      ))}
     </div>
   );
 }
