@@ -6,6 +6,7 @@
   align-items: center;
   justify-content: center;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
   color: white;
   gap: 20px;
   overflow-y: auto;
