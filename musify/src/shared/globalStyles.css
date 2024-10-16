@@ -27,6 +27,10 @@
   grid-template-rows: repeat(12, 1fr);
   color: white;
   background-image: url("https://cdn.pixabay.com/photo/2019/01/06/01/20/headphones-3916271_1280.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   height: 100vh;
   width: 100vw;
 }
@@ -94,20 +98,22 @@ controls-wrapper {
   width: 300px;
   height: 300px;
   object-fit: cover;
+  border-radius: 20px;
 }
 
 .queue-container {
   grid-column: 9 / -2;
   grid-row: 6 / -1;
-  backdrop-filter: blur(0px) saturate(180%);
-  -webkit-backdrop-filter: blur(0px) saturate(180%);
-  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(50px) saturate(180%);
+  -webkit-backdrop-filter: blur(50px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0.075);
   border: 1px solid rgba(209, 213, 219, 0);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border-radius: 8px;
+  margin-bottom: 20px;
 }
 
 .song-duration {
