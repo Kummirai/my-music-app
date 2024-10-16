@@ -9,15 +9,13 @@ function Widgets({ artistID }) {
   const [featured, setFeatured] = useState([]);
   const [newRelease, setNewRelease] = useState([]);
   const id = artistID?.artists[0]?.id;
-  
+
   useEffect(() => {
     apiClient
       .get("/search?query=artist_name&offset=0&limit=3&type=artist")
       .then((response) => {
         const otherArtists = response.data?.artists.items.slice(0, 3);
         setSimilar(otherArtists);
-        console.log("similar", otherArtists);
-        
       })
       .catch((error) => {
         console.error(error);
