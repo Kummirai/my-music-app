@@ -45,7 +45,7 @@ function Sidebar() {
         />
         <SidebarButton title="Library" to="/library" icon={<IoLibrary />} />
       </div>
-      <SidebarButton title="Signout" to="/logout" icon={<FaSignOutAlt />} />
+      <SidebarButton title="Sign Out" to="/logout" icon={<FaSignOutAlt />} />
     </div>
   );
 }
