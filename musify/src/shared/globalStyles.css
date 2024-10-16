@@ -28,10 +28,6 @@
   color: white;
   /* background-image: url("https://cdn.pixabay.com/photo/2019/01/06/01/20/headphones-3916271_1280.jpg"); */
   background-image: url('https://cdn.pixabay.com/photo/2022/06/21/21/15/audio-7276511_1280.jpg');
-  background-position: cover;
-  background-position: fixed;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
   height: 100vh;
   width: 100vw;
 }
