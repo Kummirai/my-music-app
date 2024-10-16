@@ -40,7 +40,7 @@ function Home() {
           <Route path="/favorites" element={<Favorites />} />
           <Route path="/player" element={<Player />} />
           <Route path="/artists" element={<Artists />} />
-          <Route path="/logout" element={<Logout />} />
+          <Route path="/my-music-app/" element={<Logout />} />
         </Routes>
       </div>
     </Router>
