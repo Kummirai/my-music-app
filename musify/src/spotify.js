@@ -2,8 +2,8 @@ import axios from "axios";
 
 const authEndpoint = "https://accounts.spotify.com/authorize?";
 const clientId = "ee0874b4376c4fffb9273495646b6afb";
-// const redirectUri = "https://kummirai.github.io/my-music-app";
-const redirectUri = "http://localhost:5173";
+const redirectUri = "https://kummirai.github.io/my-music-app";
+// const redirectUri = "http://localhost:5173";
 
 const scopes = ["user-library-read", "playlist-read-private"];
 
