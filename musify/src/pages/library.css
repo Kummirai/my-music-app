@@ -21,7 +21,7 @@
   height: 300px;
   position: relative;
   cursor: pointer;
-  margin-bottom: 10px;
+  margin: 20px;
 }
 
 .playlist-card:hover .playlist-fade {
