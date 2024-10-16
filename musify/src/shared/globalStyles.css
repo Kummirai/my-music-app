@@ -26,7 +26,8 @@
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(12, 1fr);
   color: white;
-  background-image: url("https://cdn.pixabay.com/photo/2019/01/06/01/20/headphones-3916271_1280.jpg");
+  /* background-image: url("https://cdn.pixabay.com/photo/2019/01/06/01/20/headphones-3916271_1280.jpg"); */
+  background-image: url('https://cdn.pixabay.com/photo/2022/01/06/23/12/audio-jack-6920454_1280.jpg');
   height: 100vh;
   width: 100vw;
 }
