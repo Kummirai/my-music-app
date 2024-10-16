@@ -5,6 +5,22 @@
   font-family: "Roboto", sans-serif;
 }
 
+.profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.profile p {
+  font-size: 12px;
+  font-weight: 700;
+  color: #b3b3b3;
+  margin-top: 6px;
+  padding: 5px;
+}
+
 .container {
   display: grid;
   grid-template-columns: repeat(12, 1fr);

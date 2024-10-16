@@ -12,6 +12,7 @@ function Sidebar() {
   const [userImage, setUserImage] = useState(
     "https://cdn.pixabay.com/photo/2023/06/23/11/23/ai-generated-8083323_1280.jpg"
   );
+  const [userName, setUserName] = useState("User");
 
   useEffect(() => {
     apiClient.get("me").then((res) => {
@@ -20,9 +21,19 @@ function Sidebar() {
     });
   }, []);
 
+  useEffect(() => {
+    apiClient.get("me").then((res) => {
+      console.log(res);
+      setUserName(res.data.display_name);
+    });
+  }, []);
+
   return (
     <div className="sidebar-container">
-      <img src={userImage} alt={userImage} className="user-image" />
+      <div className="profile">
+        <img src={userImage} alt={userImage} className="user-image" />
+        <p>{userName}</p>
+      </div>
       <div className="buttons">
         <SidebarButton title="Featured" to="/featured" icon={<MdFavorite />} />
         <SidebarButton title="Artists" to="/artists" icon={<FaGripfire />} />
