@@ -38,11 +38,6 @@ function Library() {
               <img src={playlist.images?.[0]?.url} alt={playlist.name} />
               <p className="title">{playlist.name}</p>
               <p className="sub-title">{playlist.name} Songs</p>
-              <div className="playlist-fade">
-                <IconContext.Provider value={{ size: "50px", color: "white" }}>
-                  <AiFillPlayCircle />
-                </IconContext.Provider>
-              </div>
             </div>
           </div>
         ))}
