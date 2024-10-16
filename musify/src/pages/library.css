@@ -5,7 +5,7 @@
   display: grid;
   align-items: center;
   justify-content: center;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 
   color: white;
   gap: 30px;
@@ -17,7 +17,7 @@
 }
 
 .playlist-card {
-  height: fit-content;
+  height: 320px;
   cursor: pointer;
   padding: 10px;
   border-radius: 10px;
