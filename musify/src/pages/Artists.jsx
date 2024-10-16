@@ -34,7 +34,6 @@ function Artists() {
             <div className="playlist-card">
               <img src={artist.images?.[0]?.url} alt={artist.name} />
               <p className="title">{artist.name}</p>
-              <p className="sub-title">Popularity: {artist.popularity}</p>
               <p className="sub-title">{artist.followers.total} followers</p>
             </div>
           </div>
