@@ -11,32 +11,30 @@ function AudioPlayer({
   setCurrentTrackIndex,
   total,
 }) {
-  const [isPlaying, setIsPlaying] = useState(true);
+  const [isPlaying, setIsPlaying] = useState(false);
   const [trackProgress, setTrackProgress] = useState(0);
-  let audioSrc = total[currentTrackIndex]?.track?.preview_url;
-  const audioRef = useRef(
-    new Audio(total[currentTrackIndex]?.track?.preview_url)
-  );
+  var audioSrc = total[currentTrackIndex]?.track.preview_url;
+
+  const audioRef = useRef(new Audio(total[0]?.track.preview_url));
 
   const intervalRef = useRef();
 
   const isReady = useRef(false);
 
   const { duration } = audioRef.current;
-  // console.log(duration);
-  // console.log(trackProgress);
 
   const currentPercentage = duration ? (trackProgress / duration) * 100 : 0;
 
   const startTimer = () => {
     clearInterval(intervalRef.current);
+
     intervalRef.current = setInterval(() => {
       if (audioRef.current.ended) {
         handleNext();
       } else {
-        setTrackProgress(audioRef.currentTime);
+        setTrackProgress(audioRef.current.currentTime);
       }
-    }, 1000);
+    }, [1000]);
   };
 
   useEffect(() => {
@@ -63,7 +61,9 @@ function AudioPlayer({
   useEffect(() => {
     audioRef.current.pause();
     audioRef.current = new Audio(audioSrc);
+
     setTrackProgress(audioRef.current.currentTime);
+
     if (isReady.current) {
       audioRef.current.play();
       setIsPlaying(true);
@@ -83,23 +83,17 @@ function AudioPlayer({
   const handleNext = () => {
     if (currentTrackIndex < total.length - 1) {
       setCurrentTrackIndex(currentTrackIndex + 1);
-    } else {
-      setCurrentTrackIndex(0);
-    }
-  };
-
-  const addZero = (num) => {
-    return num < 10 ? `0${num}` : num;
+    } else setCurrentTrackIndex(0);
   };
 
   const handlePrev = () => {
-    if (currentTrackIndex - 1 < 0) {
-      setCurrentTrackIndex(total.length - 1);
-    } else {
-      setCurrentTrackIndex(currentTrackIndex - 1);
-    }
+    if (currentTrackIndex - 1 < 0) setCurrentTrackIndex(total.length - 1);
+    else setCurrentTrackIndex(currentTrackIndex - 1);
   };
 
+  const addZero = (n) => {
+    return n > 9 ? "" + n : "0" + n;
+  };
   const artists = [];
   currentTrack?.album?.artists.forEach((artist) => {
     artists.push(artist.name);
