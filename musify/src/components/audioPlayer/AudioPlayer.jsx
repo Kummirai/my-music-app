@@ -117,7 +117,7 @@ function AudioPlayer({
           <div className="song-duration">
             <p className="duration">0:{addZero(Math.round(trackProgress))}</p>
             <WaveAnimation isPlaying={isPlaying} />
-            <p className="duration">00:30</p>
+            <p className="duration">00:{ !duration  ? "00" :Math.round(duration)}</p>
           </div>
           <Controls
             isPlaying={isPlaying}
