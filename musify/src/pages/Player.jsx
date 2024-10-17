@@ -41,7 +41,7 @@ function Player() {
         setCurrentTrackIndex={setCurrentTrackIndex}
       />
       <Widgets artistID={currentTrack?.Album} />
-      <SongCard album={currentTrack?.album} />
+     { !currentTrack?.album ? "" : <SongCard album={currentTrack?.album} /> }
       <Queue tracks={tracks} setCurrentTrackIndex={setCurrentTrackIndex} />
     </div>
   );
