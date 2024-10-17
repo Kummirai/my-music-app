@@ -57,7 +57,7 @@ export default function ProgressCircle({
             <circle cx="50%" cy="50%" r={size / 2 - 100} fill="#FFFFFF" />
           </clipPath>
         </defs>
-        <image
+        {/* <image
           className={isPlaying ? "active" : ""}
           x={30}
           y={30}
@@ -65,7 +65,7 @@ export default function ProgressCircle({
           height={2 * (size / 2 - 30)}
           href="https://cdn.pixabay.com/photo/2019/01/06/01/20/headphones-3916271_1280.jpg"
           clipPath="url(#myCircle)"
-        />
+        /> */}
         <image
           className={isPlaying ? "active" : ""}
           x={100}
