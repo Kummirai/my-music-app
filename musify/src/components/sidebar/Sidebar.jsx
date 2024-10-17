@@ -15,14 +15,12 @@ function Sidebar() {
 
   useEffect(() => {
     apiClient.get("me").then((res) => {
-      console.log(res);
       setUserImage(res.data.images[0].url);
     });
   }, []);
 
   useEffect(() => {
     apiClient.get("me").then((res) => {
-      console.log(res);
       setUserName(res.data.display_name);
     });
   }, []);

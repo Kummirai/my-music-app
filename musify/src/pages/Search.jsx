@@ -9,8 +9,6 @@ function Search() {
   useEffect(() => {
     APIKit.get("/search?q=" + query + "&type=track,artist,album")
       .then((response) => {
-        console.log("response.data.tracks.items");
-
         setSearchResults(response.data.tracks.items);
       })
       .catch((error) => {
