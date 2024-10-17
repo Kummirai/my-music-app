@@ -4,7 +4,9 @@
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
 }
-
+:root{
+  --background-image: url("gradient.png");
+}
 .profile {
   display: flex;
   justify-content: center;
@@ -26,7 +28,7 @@
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(12, 1fr);
   color: white;
-  background-image: url("https://img.freepik.com/free-vector/dark-blue-blurred-background_1034-589.jpg?t=st=1729176780~exp=1729180380~hmac=893030357f907a491a8dcf6b1fe5f5f0d8d5a7c294f65abf0c6dfbd681edb5fb&w=740");
+  background-image: var(--background-image);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
