@@ -41,7 +41,7 @@ export default function ProgressCircle({
     <div className="progress-circle">
       <svg width={size} height={size}>
         <g>
-          <Circle strokeWidth={"0.4rem"} color="#3B4F73" size={size} />
+          <Circle strokeWidth={"0.4rem"} color="#ffe600" size={size} />
           <Circle
             strokeWidth={"0.6rem"}
             color={color}
