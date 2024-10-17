@@ -1,13 +1,14 @@
 import APIKit from "../spotify";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import "./search.css";
 
 function Search() {
   const [query, setQuery] = useState("");
   const [searchResults, setSearchResults] = useState([]);
 
   useEffect(() => {
-    APIKit.get("/search?q=" + query + "&type=track")
+    APIKit.get("/search?q=" + query + "&type=track,artist,album")
       .then((response) => {
         console.log("response.data.tracks.items");
 
@@ -17,11 +18,9 @@ function Search() {
         console.log("error", error);
       });
 
-    const delayDebounceFn = setTimeout(() => {
-      console.log("query", query);
-    }, 500);
-
-    return () => clearTimeout(delayDebounceFn);
+    return () => {
+      setSearchResults([]);
+    };
   }, [query]);
 
   const navigate = useNavigate();
@@ -32,19 +31,23 @@ function Search() {
 
   return (
     <div className="page-container">
-      <input
-        type="text"
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-        placeholder="Search for songs, artists, albums"
-      /> 
-      <div className="library-container">
+      <div className="search-container">
+        <input
+          type="text"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          placeholder="Search for songs, artists, albums"
+        />
+      </div>
+      <div className="list-container">
         {searchResults?.map((track) => (
           <div key={track.id} onClick={() => playPlayList(track.id)}>
-            <div className="playlist-card">
+            <div className="list-card">
               <img src={track.album.images?.[0]?.url} alt={track.name} />
-              <p className="title">{track.name}</p>
+              <p className="title">{track.album.name}</p>
+              <p className="sub-title">{track.name}</p>
               <p className="sub-title">{track.artists[0].name}</p>
+              <p className="sub-title">{track.album.release_date}</p>
             </div>
           </div>
         ))}
