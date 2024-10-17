@@ -1,8 +1,14 @@
 import "./widgetCard.css";
 import PropTypes from "prop-types";
 import WidgetEntry from "./WidgetEntry";
+import { useNavigate } from "react-router-dom";
 
 function WidgetCard({ title, similar, featured, newRelease }) {
+  const navigate = useNavigate();
+  const playPlayList = (playlistId) => {
+    navigate("/player", { state: { id: playlistId } });
+  };
+
   return (
     <div className="widgetcard-header">
       <p className="widget-title">{title}</p>
@@ -23,6 +29,7 @@ function WidgetCard({ title, similar, featured, newRelease }) {
                 title={playlist?.name}
                 subtitle={playlist?.tracks?.total + " songs"}
                 image={playlist?.images[0]?.url}
+                onClick={() => playPlayList(playlist.id)}
               />
             ))
           : newRelease
