@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import "./player.css";
 import { useLocation } from "react-router-dom";
 import apiClient from "../spotify";
 import { useState } from "react";
@@ -41,8 +40,12 @@ function Player() {
         setCurrentTrackIndex={setCurrentTrackIndex}
       />
       <Widgets artistID={currentTrack?.Album} />
-     { !currentTrack?.album ? "" : <SongCard album={currentTrack?.album} /> }
-      <Queue tracks={tracks} setCurrentTrackIndex={setCurrentTrackIndex} />
+      {!currentTrack?.album ? "" : <SongCard album={currentTrack?.album} />}
+      {!tracks.length ? (
+        ""
+      ) : (
+        <Queue tracks={tracks} setCurrentTrackIndex={setCurrentTrackIndex} />
+      )}
     </div>
   );
 }

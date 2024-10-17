@@ -1,10 +1,9 @@
 import "./sidebar.css";
 import SidebarButton from "./SidebarButton";
-import { MdFavorite } from "react-icons/md";
-import { FaGripfire, FaPlay } from "react-icons/fa";
+import { MdFeaturedPlayList } from "react-icons/md";
+import { FaPlay, FaSearch, FaUser } from "react-icons/fa";
 import { FaSignOutAlt } from "react-icons/fa";
 import { IoLibrary } from "react-icons/io5";
-import { MdSpaceDashboard } from "react-icons/md";
 import { useEffect, useState } from "react";
 import apiClient from "../../spotify";
 
@@ -35,17 +34,21 @@ function Sidebar() {
         <p>{userName}</p>
       </div>
       <div className="buttons">
-        <SidebarButton title="Featured" to="/featured" icon={<MdFavorite />} />
-        <SidebarButton title="Artists" to="/artists" icon={<FaGripfire />} />
-        <SidebarButton title="Player" to="/player" icon={<FaPlay />} />
+        <SidebarButton title="Search" to="/Search" icon={<FaSearch />} />
         <SidebarButton
-          title="Favorites"
-          to="/favorites"
-          icon={<MdSpaceDashboard />}
+          title="Playlists"
+          to="/featured"
+          icon={<MdFeaturedPlayList />}
         />
+        <SidebarButton title="Artists" to="/artists" icon={<FaUser />} />
+        <SidebarButton title="Player" to="/player" icon={<FaPlay />} />
         <SidebarButton title="Library" to="/library" icon={<IoLibrary />} />
       </div>
-      <SidebarButton title="Sign Out" to="/my-music-app/" icon={<FaSignOutAlt />} />
+      <SidebarButton
+        title="Sign Out"
+        to="/my-music-app/"
+        icon={<FaSignOutAlt />}
+      />
     </div>
   );
 }
