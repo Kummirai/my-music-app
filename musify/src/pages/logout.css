@@ -1,7 +1,27 @@
 .logout-page {
   grid-column: 1 / -1;
   grid-row: 1 / -1;
-  background-image: var(--background-image);
+  background: hsla(283, 21%, 13%, 1);
+
+  background: linear-gradient(
+    45deg,
+    hsla(283, 21%, 13%, 1) 9%,
+    hsla(284, 33%, 22%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    45deg,
+    hsla(283, 21%, 13%, 1) 9%,
+    hsla(284, 33%, 22%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    45deg,
+    hsla(283, 21%, 13%, 1) 9%,
+    hsla(284, 33%, 22%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#251B29", endColorstr="#42264C", GradientType=1 );
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
